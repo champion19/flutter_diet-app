@@ -1,5 +1,4 @@
-import "package:flutter/material.dart";
-
+import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -17,13 +16,33 @@ class Homepage extends StatelessWidget {
         elevation: 0.0,
         centerTitle: true,
         leading: Container(
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: const Color(0xfff7F8F8),
             borderRadius: BorderRadius.circular(10),
           ),
+          child: const Icon(
+            Icons.arrow_back,
+            size: 30,
+            color: Colors.black,
+          ),
         ),
+        actions: [
+          Container(
+            margin: const EdgeInsets.all(10),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: const Color(0xfff7F8F8),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: const Icon(
+              Icons.keyboard_control_outlined,
+              size: 30,
+              color: Colors.black,
+            ),
+          ),
+        ],
       ),
     );
   }

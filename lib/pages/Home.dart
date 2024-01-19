@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_diet/models/category_model.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  Homepage({super.key});
+
+  List<CategoryModel> categories = [];
+  void _getCategories() {
+    
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +15,39 @@ class Homepage extends StatelessWidget {
       appBar: appBar(),
       backgroundColor: Colors.white,
       body: Column(
-        children: [ _searchField(),
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _searchField(),
+          const SizedBox(
+            height: 40,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  'Category',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Container(
+                  height: 150,
+                  color: Colors.green,
+                  child: ListView.builder(
+                    itemBuilder: (context, index) {
+                      return Container();
+                    },
+                  ))
+            ],
+          )
         ],
       ),
     );

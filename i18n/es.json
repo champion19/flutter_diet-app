@@ -1,8 +1,0 @@
-{
-  "helloWorld":  "Hola mundo",
-  "summary": "RESUMEN",
-  "productname":"Producto: {{name}} {{emoji}}",
-  "price":"Precio: {{price}}",
-  "releaseDate":"Fecha:{{date}}",
-  "payNow":"PAGAR {{total}}"
-  }

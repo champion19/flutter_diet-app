@@ -1,8 +1,0 @@
-{
-"helloWorld":  "Hello World",
-"summary": "SUMMARY",
-"productname":"Product: {{name}} {{emoji}}",
-"price":"Price: {{price}}",
-"releaseDate":"Release Date:{{date}}",
-"payNow":"PAY NOW{{total}}"
-}

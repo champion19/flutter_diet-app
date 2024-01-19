@@ -4,12 +4,14 @@ class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
   @override
+  //q
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(),
       backgroundColor: Colors.white,
       body: Column(
-        children: [ _searchField(),
+        children: [
+          _searchField(),
         ],
       ),
     );

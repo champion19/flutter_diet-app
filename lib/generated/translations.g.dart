@@ -3,10 +3,10 @@
 /// Original: i18n
 /// To regenerate, run: `dart run slang`
 ///
-/// Locales: 1
-/// Strings: 6
+/// Locales: 2
+/// Strings: 2 (1 per locale)
 ///
-/// Built on 2024-01-19 at 11:26 UTC
+/// Built on 2024-01-19 at 14:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -25,7 +25,8 @@ const AppLocale _baseLocale = AppLocale.en;
 /// - Locale locale = AppLocale.en.flutterLocale // get flutter locale from enum
 /// - if (LocaleSettings.currentLocale == AppLocale.en) // locale check
 enum AppLocale with BaseAppLocale<AppLocale, Translations> {
-	en(languageCode: 'en', build: Translations.build);
+	en(languageCode: 'en', build: Translations.build),
+	es(languageCode: 'es', build: _TranslationsEs.build);
 
 	const AppLocale({required this.languageCode, this.scriptCode, this.countryCode, required this.build}); // ignore: unused_element
 
@@ -147,12 +148,34 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	late final Translations _root = this; // ignore: unused_field
 
 	// Translations
-	String get helloWorld => 'Hello World';
-	String get summary => 'SUMMARY';
-	String productname({required Object name, required Object emoji}) => 'Product: ${name} ${emoji}';
-	String price({required Object price}) => 'Price: ${price}';
-	String releaseDate({required Object date}) => 'Release Date:${date}';
-	String payNow({required Object total}) => 'PAY NOW${total}';
+	String get textFieldLabel => 'Search Pancake';
+}
+
+// Path: <root>
+class _TranslationsEs implements Translations {
+	/// You can call this constructor and build your own translation instance of this locale.
+	/// Constructing via the enum [AppLocale.build] is preferred.
+	_TranslationsEs.build({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver})
+		: assert(overrides == null, 'Set "translation_overrides: true" in order to enable this feature.'),
+		  $meta = TranslationMetadata(
+		    locale: AppLocale.es,
+		    overrides: overrides ?? {},
+		    cardinalResolver: cardinalResolver,
+		    ordinalResolver: ordinalResolver,
+		  ) {
+		$meta.setFlatMapFunction(_flatMapFunction);
+	}
+
+	/// Metadata for the translations of <es>.
+	@override final TranslationMetadata<AppLocale, Translations> $meta;
+
+	/// Access flat map
+	@override dynamic operator[](String key) => $meta.getTranslation(key);
+
+	@override late final _TranslationsEs _root = this; // ignore: unused_field
+
+	// Translations
+	@override String get textFieldLabel => 'Buscar Pancake';
 }
 
 /// Flat map(s) containing all translations.
@@ -161,12 +184,16 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'helloWorld': return 'Hello World';
-			case 'summary': return 'SUMMARY';
-			case 'productname': return ({required Object name, required Object emoji}) => 'Product: ${name} ${emoji}';
-			case 'price': return ({required Object price}) => 'Price: ${price}';
-			case 'releaseDate': return ({required Object date}) => 'Release Date:${date}';
-			case 'payNow': return ({required Object total}) => 'PAY NOW${total}';
+			case 'textFieldLabel': return 'Search Pancake';
+			default: return null;
+		}
+	}
+}
+
+extension on _TranslationsEs {
+	dynamic _flatMapFunction(String path) {
+		switch (path) {
+			case 'textFieldLabel': return 'Buscar Pancake';
 			default: return null;
 		}
 	}

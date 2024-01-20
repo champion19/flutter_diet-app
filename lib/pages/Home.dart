@@ -90,9 +90,6 @@ class _HomePageState extends State<Homepage> {
                             fontSize: 14
                           ),
                         ),
-
-
-
                       ],
                     ),
                   );

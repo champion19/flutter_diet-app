@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   slang_flutter: ^3.28.0
   slang: ^3.28.0
+  flutter_svg: ^2.0.9
 
 
 dev_dependencies:

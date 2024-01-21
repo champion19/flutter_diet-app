@@ -24,11 +24,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: appBar(),
       backgroundColor: Colors.white,
-<<<<<<< HEAD
-      body: Column(
-        children: [
-          _searchField(),
-=======
       body: ListView(
         children: [
           _searchField(),
@@ -134,7 +129,6 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
->>>>>>> master
         ],
       ),
     );

@@ -31,11 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  slang_flutter: ^3.28.0
-  slang: ^3.28.0
-  intl: ^0.18.1
-  flutter_localization : ^0.2.0
-  sdk: flutter
+
+
 
 dev_dependencies:
   flutter_test:
@@ -50,8 +47,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.1
-  build_runner: ^2.4.8
-  slang_build_runner: ^3.28.0
+ 
 
 
 # For information on the generic Dart part of this file, see the

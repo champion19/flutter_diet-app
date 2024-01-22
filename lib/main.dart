@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diet/pages/Home.dart';
-
+import 'package:intl/intl.dart';
 
 void main() {
+  Intl.defaultLocale = 'en_US';
   runApp(const MyApp());
 }
 
@@ -15,7 +16,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Poppins'),
-        home:  HomePage()
-        );
+        home: HomePage());
   }
 }

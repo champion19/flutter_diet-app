@@ -35,6 +35,8 @@ dependencies:
   intl: ^0.18.1
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.9
+  slang: ^3.29.0
+  slang_flutter: ^3.29.0
 
 
 dev_dependencies:
@@ -50,6 +52,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.1
+  build_runner: ^2.4.8
+  slang_build_runner: ^3.29.0
 
 
 

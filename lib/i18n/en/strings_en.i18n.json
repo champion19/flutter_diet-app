@@ -1,0 +1,8 @@
+{
+  "title": "The Diet App",
+  "home" : {
+    "category": "Category",
+    "trending": "Trending",
+    "recommendation": "Recommendation\nfor Diet"
+  }
+}

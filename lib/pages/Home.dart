@@ -249,7 +249,7 @@ class HomePage extends StatelessWidget {
               width: 25,
             ),
             itemBuilder: (context, index) {
-              return Container(  
+              return Container(
                 width: 100,
                 decoration: BoxDecoration(
                     color: categories[index].boxColor.withOpacity(0.3),

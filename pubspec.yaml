@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^2.0.9
   slang: ^3.29.0
   slang_flutter: ^3.29.0
+  go_router: ^13.0.1
 
 
 dev_dependencies:

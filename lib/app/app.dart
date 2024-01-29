@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diet/i18n/generated/i18n/translations.g.dart/strings.g.dart';
-import 'package:flutter_diet/pages/Home.dart';
+import 'package:flutter_diet/project/routes/router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:intl/intl.dart';
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
   //This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: HomePage(),
+      routerConfig: MyAppRouter().router,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

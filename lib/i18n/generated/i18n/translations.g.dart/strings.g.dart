@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 8 (4 per locale)
+/// Strings: 10 (5 per locale)
 ///
-/// Built on 2024-01-24 at 19:16 UTC
+/// Built on 2024-01-31 at 13:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -160,8 +160,9 @@ class _StringsHomeEn {
 
 	// Translations
 	String get category => 'Category';
+	String get goToCategory => 'Go to Categorys';
 	String get trending => 'Trending';
-	String get recommendation => 'Recommendation\nfor Diet everyday';
+	String get recommendation => 'Recommendation\nfor Diet';
 }
 
 // Path: <root>
@@ -200,6 +201,7 @@ class _StringsHomeEs implements _StringsHomeEn {
 
 	// Translations
 	@override String get category => 'Categorias';
+	@override String get goToCategory => 'Ver todas las Categorias';
 	@override String get trending => 'Popular';
 	@override String get recommendation => 'Recomendaciones \npara la Dieta';
 }
@@ -212,8 +214,9 @@ extension on Translations {
 		switch (path) {
 			case 'title': return 'The Diet App';
 			case 'home.category': return 'Category';
+			case 'home.goToCategory': return 'Go to Categorys';
 			case 'home.trending': return 'Trending';
-			case 'home.recommendation': return 'Recommendation\nfor Diet everyday';
+			case 'home.recommendation': return 'Recommendation\nfor Diet';
 			default: return null;
 		}
 	}
@@ -224,6 +227,7 @@ extension on _StringsEs {
 		switch (path) {
 			case 'title': return 'La Dieta App';
 			case 'home.category': return 'Categorias';
+			case 'home.goToCategory': return 'Ver todas las Categorias';
 			case 'home.trending': return 'Popular';
 			case 'home.recommendation': return 'Recomendaciones \npara la Dieta';
 			default: return null;

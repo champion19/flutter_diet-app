@@ -2,6 +2,7 @@
   "title": "La Dieta App",
   "home" : {
     "category": "Categorias",
+    "goToCategory": "Ver todas las Categorias",
     "trending": "Popular",
     "recommendation": "Recomendaciones \npara la Dieta"
   }

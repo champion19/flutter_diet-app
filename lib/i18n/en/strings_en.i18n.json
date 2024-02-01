@@ -2,6 +2,7 @@
   "title": "The Diet App",
   "home" : {
     "category": "Category",
+    "goToCategory": "Go to Categorys",
     "trending": "Trending",
     "recommendation": "Recommendation\nfor Diet"
   }

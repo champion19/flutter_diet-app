@@ -4,6 +4,12 @@ import 'package:flutter_diet/project/routes/routes.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
+class ListItem {
+  final String title;
+  final String svgPath;
+  ListItem({required this.title, required this.svgPath});
+}
+
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
 
@@ -28,30 +34,69 @@ class CategoryScreen extends StatelessWidget {
     );
   }
 
+/*
+Widget _buildListItems() {
+  return ListView(
+    shrinkWrap: true,
+    physics: const NeverScrollableScrollPhysics(),
+    children: const [
+      ListTile(
+        title: Text('Pancake de moras'),
+      ),
+      ListTile(
+        title: Text('Pancake de miel'),
+      ),
+      ListTile(
+        title: Text('Snacks de naranja'),
+      ),
+      ListTile(
+        title: Text('Pancakes'),
+      ),
+      ListTile(
+        title: Text('Pie'),
+      ),
+      ListTile(
+        title: Text('Salmon nigiri'),
+      ),
+    ],
+  );
+}
+*/
+  List<ListItem> _getListItems() {
+    return [
+      ListItem(
+          title: 'Pancake de Moras',
+          svgPath: 'assets/icons/blueberry-pancake.svg'),
+      ListItem(
+          title: 'Pastel de Canai', svgPath: 'assets/icons/canai-bread.svg'),
+      ListItem(
+          title: 'Pancake de miel', svgPath: 'assets/icons/honey-pancakes.svg'),
+      ListItem(
+          title: 'Snacks de naranja',
+          svgPath: 'assets/icons/orange-snacks.svg'),
+      ListItem(title: 'Panqueques', svgPath: 'assets/icons/pancakes.svg'),
+      ListItem(title: 'Pie', svgPath: 'assets/icons/pie.svg'),
+      ListItem(
+          title: 'Salmon nigiri', svgPath: 'assets/icons/salmon-nigiri.svg')
+    ];
+  }
+
   Widget _buildListItems() {
-    return ListView(
+    List<ListItem> items = _getListItems();
+    return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      children: const [
-        ListTile(
-          title: Text('Pancake de moras'),
-        ),
-        ListTile(
-          title: Text('Pancake de miel'),
-        ),
-        ListTile(
-          title: Text('Snacks de naranja'),
-        ),
-        ListTile(
-          title: Text('Pancakes'),
-        ),
-        ListTile(
-          title: Text('Pie'),
-        ),
-        ListTile(
-          title: Text('Salmon nigiri'),
-        ),
-      ],
+      itemCount: items.length,
+      itemBuilder: (context, index) {
+        return _buildListItem(items[index]);
+      },
+    );
+  }
+
+  Widget _buildListItem(ListItem item) {
+    return ListTile(
+      leading: SvgPicture.asset(item.svgPath, height: 50, width: 50),
+      title: Text(item.title),
     );
   }
 

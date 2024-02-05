@@ -19,7 +19,7 @@ class MyAppRouter {
       GoRoute(
         name: Routes.category,
         path: Routes.category,
-        builder: (context, state) => const CategoryScreen(),
+        builder: (context, state) =>CategoryScreen(),
       )
     ],
     errorPageBuilder: (context, state) {

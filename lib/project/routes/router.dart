@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_diet/pages/home_screen.dart';
 import 'package:flutter_diet/pages/error_page.dart';
 import 'package:flutter_diet/pages/category_screen.dart';
+import 'package:flutter_diet/pages/recipe_screen.dart';
 import 'package:flutter_diet/project/routes/routes.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,7 +20,12 @@ class MyAppRouter {
       GoRoute(
         name: Routes.category,
         path: Routes.category,
-        builder: (context, state) =>CategoryScreen(),
+        builder: (context, state) => CategoryScreen(),
+      ),
+      GoRoute(
+        name: Routes.recipes,
+        path: Routes.recipes,
+        builder: (context, state) =>  RecipeScreen(),
       )
     ],
     errorPageBuilder: (context, state) {

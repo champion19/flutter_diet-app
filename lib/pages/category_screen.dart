@@ -1,9 +1,6 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_diet/i18n/generated/i18n/translations.g.dart/strings.g.dart';
 import 'package:flutter_diet/models/categories_model.dart';
-import 'package:flutter_diet/project/routes/routes.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
@@ -51,33 +48,6 @@ class CategoryScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      GestureDetector(
-                onTap: () => context.go(Routes.category),
-                child: Row(
-                  children: [
-                    Text(
-                      texts.home.goToCategory,
-                      style: const TextStyle(color: Colors.black, fontSize: 14),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      alignment: Alignment.center,
-                      width: 37,
-                      decoration: BoxDecoration(
-                          color: const Color(0xffF7F8F8),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Icon(Icons.arrow_right_alt_sharp),
-                    ),
-                  ],
-                ),
-              ),
-
-
-
-
-
-
-
                       // Add more Text widgets if needed
                     ],
                   ),

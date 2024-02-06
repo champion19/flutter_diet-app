@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diet/i18n/generated/i18n/translations.g.dart/strings.g.dart';
 import 'package:flutter_diet/models/categories_model.dart';
+import 'package:flutter_diet/project/routes/routes.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
@@ -99,7 +100,7 @@ class CategoryScreen extends StatelessWidget {
       ),
       actions: [
         GestureDetector(
-          onTap: () {},
+          onTap: ()  => context.go(Routes.recipes),//ASI!!!!
           child: Container(
             margin: const EdgeInsets.all(10),
             alignment: Alignment.center,
